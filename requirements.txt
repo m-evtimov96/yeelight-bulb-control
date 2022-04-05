@@ -1,0 +1,5 @@
+future==0.18.2
+ifaddr==0.1.7
+pypiwin32==223
+pywin32==303
+yeelight==0.7.10
