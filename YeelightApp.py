@@ -70,8 +70,9 @@ def connect_to_bulb():
         activate_controls()
 
     except BulbException as ex:
-        error_msg = str(ex) + '\n-Make sure the bulb is on.\n-Check if you are using the correct bulb ip address.'
-        tk.messagebox.showerror('error', error_msg)
+        error_msg = str(ex) + '\n-Make sure the bulb is on and has enabled Lan Control.\n-Check if you are using the ' \
+                              'correct bulb ip address.\n-Ensure that the program is in the firewall exceptions list.'
+        tk.messagebox.showerror('Error', error_msg)
         connect_status_lbl.config(text='Not connected to a bulb')
         bulb_toggle_btn.config(state='disabled')
         deactivate_controls()
